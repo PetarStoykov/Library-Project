@@ -46,8 +46,8 @@ int main()
     lib1.showAvailableBooks();
 
     // Demo for 3rd task to save books with more than one author information into a file:
-    // string file = "D:/Workspaces/University/LibraryProject/books_info.txt";
-    // lib1.saveInfoInFile(file);
+    string file = "D:/Workspaces/University/LibraryProject/books_info.txt";
+    lib1.saveInfoInFile(file);
 
     return 0;
 }
