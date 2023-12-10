@@ -7,11 +7,10 @@ using namespace std;
 class Library
 {
     private:
-        int numOfBooks;
         vector<Book> books;
         
     public:
-        Library(int num, vector<Book> booksVec);
+        Library(vector<Book> booksVec);
         ~Library();
         
         //Task 2
