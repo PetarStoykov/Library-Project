@@ -4,27 +4,25 @@
 #include <vector>
 #include <string>
 
-using namespace std;
-
 class Book
 {
     //Operator << overloading
-    friend ostream &operator<<(ostream &os, const Book &book);
+    friend std::ostream &operator<<(std::ostream &os, const Book &book);
     
 private:
-    string title;
-    vector<string> authors;
+    std::string title;
+    std::vector<std::string> authors;
     bool available;
-    string date;
+    std::string date;
 public:
-    Book(string title, vector<string> auth, bool avail, string date);
+    Book(std::string title, std::vector<std::string> auth, bool avail, std::string date);
     ~Book();
     
     //Get methods
-    string getDate() const;
-    string getTitle() const;
+    std::string getDate() const;
+    std::string getTitle() const;
     bool getAvailable() const;
-    vector<string> getAuthors() const;
+    std::vector<std::string> getAuthors() const;
 
 };
 
