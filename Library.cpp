@@ -4,7 +4,7 @@
 
 
 //Constructor
-Library::Library(int num, vector<Book> booksVec) : numOfBooks{num}, books{booksVec} {};
+Library::Library(vector<Book> booksVec) : books{booksVec} {};
 
 Library::~Library()
 {

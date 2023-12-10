@@ -37,7 +37,7 @@ int main()
     books.push_back(book3);
 
     // Creating a library
-    Library lib1(1, books);
+    Library lib1(books);
 
     // Demo for 2nd task to show the titles of books loaned on a certain date:
     lib1.showLoanedOn("02.01.2002");
