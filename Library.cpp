@@ -2,6 +2,7 @@
 #include <fstream>
 #include <algorithm>
 
+using namespace std;
 
 //Constructor
 Library::Library(vector<Book> booksVec) : books{booksVec} {};
@@ -22,7 +23,7 @@ void Library::showLoanedOn(string givenDate){
 }
 
 //A function that compares alphabetically the primary authors of two given books.
-bool compareByAuthor(const Book &book1, const Book &book2){
+bool compareByPrimaryAuthor(const Book &book1, const Book &book2){
     return book1.getAuthors().at(0) < book2.getAuthors().at(0);
 }
 
@@ -34,7 +35,7 @@ void Library::showAvailableBooks(){
             filteredBooks.push_back(book);
         }
     }
-    sort(filteredBooks.begin(), filteredBooks.end(), compareByAuthor);
+    sort(filteredBooks.begin(), filteredBooks.end(), compareByPrimaryAuthor);
     
     cout << "Information on available books (sorted by author):" << endl;
 

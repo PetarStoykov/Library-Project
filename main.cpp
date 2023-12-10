@@ -1,10 +1,11 @@
 #include "Book.h"
 #include "Library.h"
-
 #include <iostream>
 #include <vector>
 
 using namespace std;
+
+const string DEFAULT_FILE_PATH = "D:/Workspaces/University/LibraryProject/books_info.txt";
 
 int main()
 {
@@ -25,7 +26,7 @@ int main()
     // Creating books
     Book book1("Titanic", auths1, true, "02.01.2002");
     Book book2("Ice Age", auths2, true, "02.01.2002");
-    Book book3("Something for Title", auths3, true, "20.12.2000");
+    Book book3("Something for Title", auths3, true, "20.12.2005");
 
     // Testing the overloaded operator - <<
     cout << book1 << endl;
@@ -46,7 +47,18 @@ int main()
     lib1.showAvailableBooks();
 
     // Demo for 3rd task to save books with more than one author information into a file:
-    string file = "D:/Workspaces/University/LibraryProject/books_info.txt";
+    string file;
+
+    //Get file path from the user and save it into the string 'file'
+    //A quick file_path to test the functionality - D:/Workspaces/University/LibraryProject/books_info_TEST.txt
+    cout << "Please enter a file path (you can press ENTER and choose the DEFAULT): ";
+    getline(cin, file);
+
+    //Checks if a new path is set if not sets the DEFAULT
+    if(file.empty()){
+        file = DEFAULT_FILE_PATH;
+    }
+
     lib1.saveInfoInFile(file);
 
     return 0;

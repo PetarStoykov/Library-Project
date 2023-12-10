@@ -2,25 +2,23 @@
 #define LIBRARY_H
 #include "Book.h"
 
-using namespace std;
-
 class Library
 {
     private:
-        vector<Book> books;
+        std::vector<Book> books;
         
     public:
-        Library(vector<Book> booksVec);
+        Library(std::vector<Book> booksVec);
         ~Library();
         
         //Task 2
-        void showLoanedOn(string givenDate);
+        void showLoanedOn(std::string givenDate);
         
         //Task 1
         void showAvailableBooks();
         
         //Task 3
-        void saveInfoInFile (const string &fileName);
+        void saveInfoInFile (const std::string &fileName);
 
 };
 
